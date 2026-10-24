@@ -1,0 +1,10 @@
+name: Protect Tags
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  protect:
+    uses: biaenergy/security-workflows/.github/workflows/block-tags.yml@main

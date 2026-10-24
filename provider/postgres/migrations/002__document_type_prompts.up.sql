@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS document_type_prompts (
+    id BIGSERIAL PRIMARY KEY,
+    document_type VARCHAR(255) NOT NULL UNIQUE,
+    prompt_complement TEXT NOT NULL,
+    is_active BOOLEAN DEFAULT true,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
